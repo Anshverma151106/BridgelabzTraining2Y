@@ -1,0 +1,70 @@
+TC-3: Merge Sort Time Complexity
+
+Array:
+
+{8, 61, 2, 3, 4, 0}
+
+1. Division/Split Tree
+
+Merge Sort repeatedly divides the array into two halves.
+
+                 {8, 61, 2, 3, 4, 0}
+                    /            \
+             {8, 61, 2}       {3, 4, 0}
+               /    \            /    \
+            {8}    {61,2}     {3}    {4,0}
+                    /  \              / \
+                  {61} {2}          {4} {0}
+
+Then the individual elements are merged in sorted order:
+
+{61} + {2}       → {2, 61}
+{4} + {0}       → {0, 4}
+
+{8} + {2, 61}   → {2, 8, 61}
+{3} + {0, 4}    → {0, 3, 4}
+
+{2, 8, 61} + {0, 3, 4}
+                  ↓
+          {0, 2, 3, 4, 8, 61}
+
+2. Recurrence Relation
+
+Merge Sort divides the array into two halves and then merges them.
+
+The recurrence is:
+
+T(N) = 2T(N/2) + O(N)
+
+Where:
+
+2T(N/2) → sorting two halves
+O(N) → merging the two sorted halves
+Recursion Tree
+
+At each level, the total merging work is approximately N.
+
+Level 0:        N              → O(N)
+                / \
+Level 1:      N/2   N/2        → O(N)
+              / \   / \
+Level 2:    N/4 ... ... N/4    → O(N)
+                ...
+Last level:     1 1 1 ... 1    → O(N)
+
+
+Number of levels:
+
+log₂N
+
+Work at each level:
+
+O(N)
+
+Therefore:
+
+Total = O(N) × O(log N)
+      = O(N log N)
+Final Answer:
+
+Merge Sort Time Complexity = O(N log N)

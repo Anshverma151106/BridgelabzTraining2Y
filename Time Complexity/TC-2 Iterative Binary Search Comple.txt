@@ -1,0 +1,85 @@
+TC-2: Iterative Binary Search Complexity
+
+Sorted array:
+
+{0, 2, 3, 4, 8, 61}
+
+Target = 4
+
+Binary Search repeatedly divides the search range into half.
+
+Step-by-step
+
+Initial:
+
+{0, 2, 3, 4, 8, 61}
+ L        M      R
+
+Using zero-based indexing:
+
+L = 0
+R = 5
+M = (0 + 5) / 2 = 2
+array[2] = 3
+
+Since 4 > 3, search the right half.
+
+{4, 8, 61}
+ ↑
+ L
+
+Now:
+
+L = 3
+R = 5
+M = (3 + 5) / 2 = 4
+array[4] = 8
+
+Since 4 < 8, search the left half.
+
+{4}
+ ↑
+ M
+
+Now:
+
+L = 3
+R = 3
+M = 3
+array[3] = 4
+
+Target found.
+
+Search reduction
+6 elements
+    ↓
+3 elements
+    ↓
+1 element
+
+Each step approximately halves the search space.
+
+Mathematical Derivation
+
+After each comparison:
+
+N → N/2 → N/4 → N/8 → ...
+
+After k steps:
+
+N / 2^k = 1
+
+Therefore:
+
+N = 2^k
+
+
+k = log₂N
+
+So the maximum number of comparisons is approximately:
+
+log₂N
+
+Therefore:
+
+Worst Case Time Complexity = O(log N)

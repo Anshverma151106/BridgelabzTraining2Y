@@ -1,0 +1,26 @@
+SC-3: Merge Sort Space Complexity
+
+Merge Sort divides the array and then merges the subarrays.
+
+During merging, additional temporary arrays/storage are generally required.
+
+For an array of N elements, the temporary storage can hold approximately N elements.
+
+Therefore:
+
+Auxiliary Space Complexity:
+
+O(N)
+
+Why?
+
+Suppose we have:
+
+{8, 61, 2}    {3, 4, 0}
+
+During merging, we need temporary storage to combine the elements in sorted order:
+
+Temporary array:
+{0, 2, 3, 4, 8, 61}
+
+Thus, extra memory proportional to N is required.

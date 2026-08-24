@@ -1,0 +1,21 @@
+ALGORITHM PrimeNumberChecker
+INPUT: N
+
+IF N <= 1 THEN
+    PRINT "Not Prime"
+    STOP
+END IF
+
+i ← 2
+
+WHILE i * i <= N DO
+    IF N MOD i = 0 THEN
+        PRINT "Not Prime"
+        STOP
+    END IF
+
+    i ← i + 1
+END WHILE
+
+PRINT "Prime"
+END ALGORITHM

@@ -1,0 +1,35 @@
+TC-1: Linear Search Time Complexity
+
+Given array:
+
+{8, 61, 2, 3, 4, 0}
+
+Linear Search checks elements one by one from left to right.
+
+1. Best Case — Target = 8
+
+Array:
+
+{8, 61, 2, 3, 4, 0}
+
+Target is found at the first position.
+
+Only 1 comparison is required.
+
+Best Case Time Complexity: O(1)
+
+Explanation: The target is found immediately, regardless of the size of the array.
+
+2. Worst Case — Target = 0 or 5
+
+For target 0:
+
+8 → 61 → 2 → 3 → 4 → 0
+
+We have to check all 6 elements.
+
+If the target is 5, which is not present, we also check all 6 elements.
+
+For an array of size N, at most N elements are checked.
+
+Worst Case Time Complexity: O(N)

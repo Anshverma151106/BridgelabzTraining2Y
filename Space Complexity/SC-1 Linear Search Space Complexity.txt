@@ -1,0 +1,22 @@
+SC-1: Linear Search Space Complexity
+
+Array:
+
+{8, 61, 2, 3, 4, 0}
+
+Iterative Linear Search only needs a few variables such as:
+
+i
+target
+
+It does not create another array.
+
+Therefore, the extra memory does not increase with N.
+
+Auxiliary Space Complexity:
+
+O(1)
+
+Reason: Only a constant amount of extra memory is used.
+
+Note: The input array itself requires O(N) storage, but that is input space, not auxiliary space.

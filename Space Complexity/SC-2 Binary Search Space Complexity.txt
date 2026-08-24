@@ -1,0 +1,21 @@
+SC-2: Binary Search Space Complexity
+
+For Iterative Binary Search, we generally use:
+
+low
+high
+mid
+
+Only a constant number of variables are required.
+
+No additional array is created.
+
+Auxiliary Space Complexity:
+
+O(1)
+
+So:
+
+Iterative Binary Search Space = O(1)
+
+Recursive Binary Search would use O(log N) stack space because of recursive function calls.
